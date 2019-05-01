@@ -42,6 +42,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
@@ -51,12 +52,12 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Ben/Desktop/project/project.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Ben/Desktop/project/project.xpr [current_project]
-  set_property ip_repo_paths c:/Users/Ben/Desktop/project/project.cache/ip [current_project]
-  set_property ip_output_repo c:/Users/Ben/Desktop/project/project.cache/ip [current_project]
-  add_files -quiet C:/Users/Ben/Desktop/project/project.runs/synth_1/main.dcp
-  read_xdc C:/Users/Ben/Desktop/project/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc
+  set_property webtalk.parent_dir P:/ENEL373/Lab_A01_group_20/project.cache/wt [current_project]
+  set_property parent.project_path P:/ENEL373/Lab_A01_group_20/project.xpr [current_project]
+  set_property ip_repo_paths p:/ENEL373/Lab_A01_group_20/project.cache/ip [current_project]
+  set_property ip_output_repo p:/ENEL373/Lab_A01_group_20/project.cache/ip [current_project]
+  add_files -quiet P:/ENEL373/Lab_A01_group_20/project.runs/synth_1/main.dcp
+  read_xdc P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc
   link_design -top main -part xc7a100tcsg324-3
   write_hwdef -file main.hwdef
   close_msg_db -file init_design.pb
@@ -118,21 +119,5 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-}
-
-start_step write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  catch { write_mem_info -force main.mmi }
-  write_bitstream -force main.bit 
-  catch { write_sysdef -hwdef main.hwdef -bitfile main.bit -meminfo main.mmi -file main.sysdef }
-  catch {write_debug_probes -quiet -force debug_nets}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
 }
 

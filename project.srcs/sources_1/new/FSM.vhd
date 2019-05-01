@@ -109,7 +109,7 @@ begin
                 when "00" => enable_regs_tri <= "0001";
                 when "01" => enable_regs_tri <= "0010";
                 when "10" => enable_regs_tri <= "0100";
-                when "11" => enable_regs_tri <= "1000";
+                when others => enable_regs_tri <= "1000";
             end case;
             enable_op_A <= '0';
             enable_reg_G <= '1';
@@ -129,7 +129,7 @@ begin
                 when "00" => enable_regs <= "0001";
                 when "01" => enable_regs <= "0010";
                 when "10" => enable_regs <= "0100";
-                when "11" => enable_regs <= "1000";
+                when others => enable_regs <= "1000";
             end case;
             enable_regs_tri <= "0000";
             enable_op_A <= '0';
@@ -142,7 +142,7 @@ begin
                 when "00" => enable_regs <= "0001";
                 when "01" => enable_regs <= "0010";
                 when "10" => enable_regs <= "0100";
-                when "11" => enable_regs <= "1000";
+                when others => enable_regs <= "1000";
             end case;
             enable_regs_tri <= "0000";            
             enable_op_A <= '0';
@@ -164,7 +164,7 @@ begin
                 when "00" => enable_regs_tri <= "0001";
                 when "01" => enable_regs_tri <= "0010";
                 when "10" => enable_regs_tri <= "0100";
-                when "11" => enable_regs_tri <= "1000";
+                when others => enable_regs_tri <= "1000";
             end case;
             enable_op_A <= '0';
             enable_reg_G <= '1';

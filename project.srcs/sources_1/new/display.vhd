@@ -97,7 +97,7 @@ begin
             when "1100"   => disp_out <= "1000110";
             when "1101"   => disp_out <= "0100001";
             when "1110"   => disp_out <= "0000110";
-            when "1111"   => disp_out <= "0001110";
+            when others   => disp_out <= "0001110";
         end case;
     end process seg_proc;
 

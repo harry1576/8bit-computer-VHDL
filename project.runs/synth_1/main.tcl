@@ -3,6 +3,7 @@
 # 
 
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a100tcsg324-3
@@ -10,26 +11,26 @@ create_project -in_memory -part xc7a100tcsg324-3
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Ben/Desktop/project/project.cache/wt [current_project]
-set_property parent.project_path C:/Users/Ben/Desktop/project/project.xpr [current_project]
+set_property webtalk.parent_dir P:/ENEL373/Lab_A01_group_20/project.cache/wt [current_project]
+set_property parent.project_path P:/ENEL373/Lab_A01_group_20/project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/FSM.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/tri_8.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/reg_8.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/display.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/debounce.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/imports/Downloads/clock_divider.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/btn_reg.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/ALU.vhd
-  C:/Users/Ben/Desktop/project/project.srcs/sources_1/new/main.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd
+  P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Ben/Desktop/project/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/Ben/Desktop/project/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+read_xdc P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc
+set_property used_in_implementation false [get_files P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
 
 
 synth_design -top main -part xc7a100tcsg324-3
