@@ -1,36 +1,15 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Group 20
 -- Create Date: 20.03.2019 12:24:49
--- Design Name: 
 -- Module Name: main - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Description: main module for regs and ALU project
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- all external inputs to FPGA
 entity main is
     Port ( SW : in STD_LOGIC_VECTOR (15 downto 0);
            BTNC : in STD_LOGIC;
@@ -45,15 +24,21 @@ entity main is
            CG : out STD_LOGIC);
 end main;
 
-architecture Behavioral of main is
+architecture structural of main is
 
-
+-- clock divider to slow system clock from 50MHz to 200Hz
 component clock_divider
     Port (in_clock  : in std_logic;
           enable    : in std_logic;
           out_clock : out std_logic := '0');
 end component;
 
+-- logic unit for standard logic operations
+-- addition
+-- subtraction
+-- AND
+-- OR
+-- XOR
 component ALU
     Port ( OP : in STD_LOGIC_VECTOR (3 downto 0);
            A : in STD_LOGIC_VECTOR (7 downto 0);
@@ -61,28 +46,22 @@ component ALU
            result : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
-component reg_4
-    Port ( D : in STD_LOGIC_VECTOR (3 downto 0);
-           Clk : in STD_LOGIC;
-           En : in STD_LOGIC;
-           Q : out STD_LOGIC_VECTOR (3 downto 0));
-end component;
-
-
-
+-- SR latch for holding button until input is registered
 component btn_reg
     Port ( inp : in STD_LOGIC;
            outp : out STD_LOGIC;
            reset : in STD_LOGIC);
 end component;
 
+-- debouncing circuits, holds button input for 3 clock cycles before output
 component debounce
     Port ( inp : in STD_LOGIC;
-           cclk : in STD_LOGIC;
+           clk : in STD_LOGIC;
            clr : in STD_LOGIC;
            outp : out STD_LOGIC);
 end component;
 
+-- output to 7 segment display, displays OPCODE, selected register, and 1 byte output
 component display
     Port ( disp_in : in STD_LOGIC_VECTOR (7 downto 0);
            instr_in : in STD_LOGIC_VECTOR (3 downto 0);
@@ -92,6 +71,7 @@ component display
            disp_out : out STD_LOGIC_VECTOR (6 downto 0));
 end component;
 
+-- 8 bit register for storing inputs/outputs
 component reg_8
     Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
            Clk : in STD_LOGIC;
@@ -99,12 +79,14 @@ component reg_8
            Q : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
+-- 8 bit tristate buffer for holding inputs/outputs
 component tri_8
     Port ( X : in STD_LOGIC_VECTOR (7 downto 0);
            En : in STD_LOGIC;
            F : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
+-- finite state machine for controlling all timing
 component FSM
     Port ( input : in STD_LOGIC_VECTOR (7 downto 0);
            execute : in STD_LOGIC;
@@ -112,17 +94,16 @@ component FSM
            Clk : in STD_LOGIC;
            btn_reset : out STD_LOGIC;
            
-           enable_regs : out STD_LOGIC_VECTOR (3 downto 0);
-           enable_regs_tri : out STD_LOGIC_VECTOR (3 downto 0);
+           en_regs : out STD_LOGIC_VECTOR (3 downto 0);
+           en_regs_tri : out STD_LOGIC_VECTOR (3 downto 0);
            
-           enable_op_A : out STD_LOGIC;
-           enable_reg_G : out STD_LOGIC;
-           enable_tri_G : out STD_LOGIC;
-           enable_tri_EXT : out STD_LOGIC);
+           en_op_A : out STD_LOGIC;
+           en_reg_G : out STD_LOGIC;
+           en_tri_G : out STD_LOGIC;
+           en_tri_EXT : out STD_LOGIC);
 end component;
 
 signal main_clock : std_logic;
-signal enable_op : std_logic;
 
 signal opcode : std_logic_vector (3 downto 0);
 
@@ -169,7 +150,7 @@ begin
     CG <= seven_seg_out(6);
 
 
-    button_debounce : debounce port map(inp => BTNC, cclk => main_clock, clr => debounce_clr, outp => btn_reg_in);
+    button_debounce : debounce port map(inp => BTNC, clk => main_clock, clr => debounce_clr, outp => btn_reg_in);
     button_toggle : btn_reg port map(inp => btn_reg_in, outp => button, reset => btn_reg_reset);
     
     
@@ -197,11 +178,8 @@ begin
     main_ALU: ALU port map(OP => opcode, A => op_A_out, B => data_bus, result => ALU_out);
     
     main_FSM: FSM port map(input => SW(15 downto 8), execute => button, op => opcode, Clk => main_clock, btn_reset => btn_reg_reset, 
-                           enable_regs => en_regs, enable_regs_tri => en_regs_tri,
-                           enable_op_A => en_op_A, enable_reg_G => en_reg_G, enable_tri_G => en_tri_G, enable_tri_EXT => en_tri_EXT);
+                           en_regs => en_regs, en_regs_tri => en_regs_tri,
+                           en_op_A => en_op_A, en_reg_G => en_reg_G, en_tri_G => en_tri_G, en_tri_EXT => en_tri_EXT);
     
     seven_seg: display port map(disp_in => reg_G_out, instr_in => SW(15 downto 12), reg_in => SW(11 downto 10), clk => main_clock, seg => AN, disp_out => seven_seg_out);
-    
-    --AN <= seven_seg_an;
-    
-end Behavioral;
+end structural;

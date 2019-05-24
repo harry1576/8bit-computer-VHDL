@@ -1,0 +1,159 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 3932
+
+Current time: 	5/15/19 2:10:16 PM NZST
+Time zone: 	New Zealand Standard Time (Pacific/Auckland)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	bsl28
+User home directory: C:/Users/bsl28
+User working directory: P:/ENEL373/Lab_A01_group_20
+User country: 	NZ
+User language: 	en
+User locale: 	en_NZ
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/bsl28/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/bsl28/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	220 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 414 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bL:g (cv:JFrame):  Open Project : addNotify
+// Opening Vivado Project: P:\ENEL373\Lab_A01_group_20\project.xpr. Version: Vivado v2016.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project P:/ENEL373/Lab_A01_group_20/project.xpr 
+// [GUI Memory]: 37 MB (+36025kb) [00:00:04]
+// [Engine Memory]: 400 MB (+268233kb) [00:00:04]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project P:/ENEL373/Lab_A01_group_20/project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 421 MB. GUI used memory: 29 MB. Current time: 5/15/19 2:10:18 PM NZST
+// [Engine Memory]: 422 MB (+2073kb) [00:00:09]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 51 MB (+13446kb) [00:00:11]
+// [Engine Memory]: 483 MB (+41551kb) [00:00:11]
+// [GUI Memory]: 55 MB (+912kb) [00:00:14]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: project; location: P:/ENEL373/Lab_A01_group_20; part: xc7a100tcsg324-3
+// Tcl Message: open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 769.563 ; gain = 111.398 
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 508 MB (+571kb) [00:00:20]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd)]", 1); // z:k (G:JPanel, cv:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 21); // z:k (G:JPanel, cv:JFrame)
+// [GUI Memory]: 58 MB (+677kb) [00:00:34]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd), clock_div - clock_divider - behavioral (clock_divider.vhd)]", 16, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd), clock_div - clock_divider - behavioral (clock_divider.vhd)]", 16, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 527 MB. GUI used memory: 37 MB. Current time: 5/15/19 2:10:49 PM NZST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd), clock_div - clock_divider - behavioral (clock_divider.vhd)]", 16, false); // z:k (G:JPanel, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 204, 276); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 325, 416); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 325, 416, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 31 seconds
+selectCodeEditor("clock_divider.vhd", 158, 454); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 306, 416); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 306, 416, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("clock_divider.vhd", 469, 335); // bH:N (JPanel:JComponent, cv:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 25, false); // x:Y (w:G, cv:JFrame)
+// [GUI Memory]: 68 MB (+6725kb) [00:01:21]
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// G:be (cv:JFrame): Synthesis is Out-of-date: addNotify
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // h:JCheckBox (JPanel:JComponent, G:be): TRUE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, G:be)
+// bL:g (cv:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // G:be (cv:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// 'ck' command handler elapsed time: 4 seconds
+dismissDialog("Resetting Runs"); // bL:g (cv:JFrame)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// bL:g (cv:JFrame):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// HMemoryUtils.trashcanNow. Engine heap size: 554 MB. GUI used memory: 37 MB. Current time: 5/15/19 2:11:39 PM NZST
+// [Engine Memory]: 554 MB (+22327kb) [00:01:28]
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed May 15 14:11:51 2019] Launched synth_1... Run output will be captured here: P:/ENEL373/Lab_A01_group_20/project.runs/synth_1/runme.log [Wed May 15 14:11:51 2019] Launched impl_1... Run output will be captured here: P:/ENEL373/Lab_A01_group_20/project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 826.133 ; gain = 22.840 
+// Elapsed time: 15 seconds
+dismissDialog("Generate Bitstream"); // bL:g (cv:JFrame)
+// Elapsed time: 34 seconds
+selectCodeEditor("clock_divider.vhd", 189, 204); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 197, 223); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 195, 226, false, false, false, false, true); // bH:N (JPanel:JComponent, cv:JFrame) - Double Click
+selectCodeEditor("clock_divider.vhd", 195, 226); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 192, 226); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("clock_divider.vhd", 362, 287); // bH:N (JPanel:JComponent, cv:JFrame)
+// [GUI Memory]: 73 MB (+2252kb) [00:02:46]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 77 MB (+642kb) [00:03:40]
+// Elapsed time: 79 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd), main_FSM - FSM - Behavioral (FSM.vhd)]", 18, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd), main_FSM - FSM - Behavioral (FSM.vhd)]", 18, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectCodeEditor("FSM.vhd", 318, 284); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("FSM.vhd", 271, 263); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("FSM.vhd", 427, 264); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("FSM.vhd", 425, 287); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("FSM.vhd", 258, 277); // bH:N (JPanel:JComponent, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd), main_ALU - ALU - Behavioral (ALU.vhd)]", 17, false); // z:k (G:JPanel, cv:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main - Behavioral (main.vhd), main_ALU - ALU - Behavioral (ALU.vhd)]", 17, false, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click
+selectCodeEditor("ALU.vhd", 194, 306); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("ALU.vhd", 219, 418); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("ALU.vhd", 284, 429); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("ALU.vhd", 231, 458); // bH:N (JPanel:JComponent, cv:JFrame)
+selectCodeEditor("ALU.vhd", 241, 476); // bH:N (JPanel:JComponent, cv:JFrame)

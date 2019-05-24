@@ -1,0 +1,425 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed May 22 14:01:45 2019
+# Process ID: 10940
+# Current directory: P:/ENEL373/Lab_A01_group_20
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10712 P:\ENEL373\Lab_A01_group_20\project.xpr
+# Log file: P:/ENEL373/Lab_A01_group_20/vivado.log
+# Journal file: P:/ENEL373/Lab_A01_group_20\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project P:/ENEL373/Lab_A01_group_20/project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 754.223 ; gain = 142.852
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Wed May 22 14:03:03 2019] Launched impl_1...
+Run output will be captured here: P:/ENEL373/Lab_A01_group_20/project.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 754.223 ; gain = 0.000
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.2
+  **** Build date : Jun  2 2016-16:57:03
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AA7A82A
+set_property PROGRAM.FILE {P:/ENEL373/Lab_A01_group_20/project.runs/impl_1/main.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {P:/ENEL373/Lab_A01_group_20/project.runs/impl_1/main.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-3
+Top: main
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:39 ; elapsed = 00:03:23 . Memory (MB): peak = 867.371 ; gain = 660.047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:48]
+INFO: [Synth 8-3491] module 'debounce' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:34' bound to instance 'button_debounce' of component 'debounce' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'debounce' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:41]
+INFO: [Synth 8-3491] module 'btn_reg' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:34' bound to instance 'button_toggle' of component 'btn_reg' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'btn_reg' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'btn_reg' (2#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:40]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg0' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'reg_8' (3#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:41]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg0_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'tri_8' (4#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:40]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg1' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:179]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg1_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:180]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg2' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:182]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg2_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:183]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg3' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:185]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg3_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:186]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'op_A' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:189]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg_G' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:191]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'tri_G' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:192]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'tri_EXT' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:194]
+INFO: [Synth 8-3491] module 'clock_divider' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:21' bound to instance 'clock_div' of component 'clock_divider' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:54]
+	Parameter INPUT_FREQUENCY bound to: 50000000 - type: integer 
+	Parameter OUTPUT_FREQUENCY bound to: 200 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (5#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:54]
+INFO: [Synth 8-3491] module 'ALU' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:36' bound to instance 'main_ALU' of component 'ALU' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'ALU' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:43]
+INFO: [Synth 8-3491] module 'FSM' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:34' bound to instance 'main_FSM' of component 'FSM' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'FSM' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:50]
+WARNING: [Synth 8-614] signal 'input' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:66]
+WARNING: [Synth 8-614] signal 'input' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (7#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:50]
+INFO: [Synth 8-3491] module 'display' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:34' bound to instance 'seven_seg' of component 'display' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'display' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:43]
+WARNING: [Synth 8-614] signal 'instr_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:60]
+WARNING: [Synth 8-614] signal 'reg_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:60]
+WARNING: [Synth 8-614] signal 'disp_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'display' (8#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:43]
+WARNING: [Synth 8-3848] Net debounce_clr in module/entity main does not have driver. [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'main' (9#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:48]
+WARNING: [Synth 8-3331] design FSM has unconnected port input[9]
+WARNING: [Synth 8-3331] design FSM has unconnected port input[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:40 ; elapsed = 00:03:26 . Memory (MB): peak = 893.059 ; gain = 685.734
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin button_debounce:clr to constant 0 [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:172]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:40 ; elapsed = 00:03:28 . Memory (MB): peak = 893.059 ; gain = 685.734
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:53 ; elapsed = 00:03:52 . Memory (MB): peak = 1235.160 ; gain = 1027.836
+40 Infos, 25 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 1235.160 ; gain = 390.500
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Wed May 22 14:17:25 2019] Launched impl_1...
+Run output will be captured here: P:/ENEL373/Lab_A01_group_20/project.runs/impl_1/runme.log
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+ERROR: [VRFC 10-1412] syntax error near entity [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:10]
+ERROR: [VRFC 10-1412] syntax error near ; [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-91] debounce is not declared [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:40]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:43]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:46]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:49]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:52]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:55]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:58]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:61]
+WARNING: [VRFC 10-1256] possible infinite loop; process does not have a wait statement [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:38]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:9]
+INFO: [VRFC 10-240] VHDL file P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1249.008 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+ERROR: [VRFC 10-1412] syntax error near entity [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:10]
+ERROR: [VRFC 10-1412] syntax error near ; [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-91] debounce is not declared [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:40]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:43]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:46]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:49]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:52]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:55]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:58]
+ERROR: [VRFC 10-1412] syntax error near => [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:61]
+WARNING: [VRFC 10-1256] possible infinite loop; process does not have a wait statement [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:38]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:9]
+INFO: [VRFC 10-240] VHDL file P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+ERROR: [VRFC 10-1412] syntax error near entity [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:10]
+ERROR: [VRFC 10-1412] syntax error near ; [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-91] debounce is not declared [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:9]
+INFO: [VRFC 10-240] VHDL file P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+ERROR: [VRFC 10-1412] syntax error near ; [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-704] formal inp has no actual or default value [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:25]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd:9]
+INFO: [VRFC 10-240] VHDL file P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1250.754 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto bf5a05f02374464e8183bfc235b936ab --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.debounce [debounce_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed May 22 14:29:57 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1250.754 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1255.867 ; gain = 5.113
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1274.164 ; gain = 0.000
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debounce
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/ENEL373/Lab_A01_group_20/project.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity testbench
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto bf5a05f02374464e8183bfc235b936ab --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.debounce [debounce_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed May 22 14:37:54 2019...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'P:/ENEL373/Lab_A01_group_20/project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1274.164 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 1274.164 ; gain = 0.000
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AA7A82A
+close_sim

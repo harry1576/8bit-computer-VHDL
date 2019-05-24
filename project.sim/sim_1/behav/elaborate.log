@@ -9,16 +9,6 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
 Compiling architecture behavioral of entity xil_defaultlib.debounce [debounce_default]
-Compiling architecture behavioral of entity xil_defaultlib.btn_reg [btn_reg_default]
-Compiling architecture behavioral of entity xil_defaultlib.reg_8 [reg_8_default]
-Compiling architecture behavioral of entity xil_defaultlib.tri_8 [tri_8_default]
-Compiling architecture behavioral of entity xil_defaultlib.clock_divider [clock_divider_default]
-Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
-Compiling architecture behavioral of entity xil_defaultlib.FSM [fsm_default]
-Compiling architecture behavioral of entity xil_defaultlib.display [display_default]
-Compiling architecture behavioral of entity xil_defaultlib.main [main_default]
 Compiling architecture behavioral of entity xil_defaultlib.testbench
 Built simulation snapshot testbench_behav

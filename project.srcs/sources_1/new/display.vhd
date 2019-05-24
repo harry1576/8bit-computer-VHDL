@@ -1,35 +1,16 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Group 20
 -- Create Date: 20.03.2019 16:54:47
--- Design Name: 
 -- Module Name: display - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Description: display module for displaying 4 digits
+-- digit 1: OPCODE
+-- digit 2: selected register
+-- digits 3 & 4: output from register G
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity display is
     Port ( disp_in : in STD_LOGIC_VECTOR (7 downto 0);
@@ -49,7 +30,6 @@ architecture Behavioral of display is
 
 
 begin
-
     state_register: process(Clk)
     begin
       if (Clk'event and Clk = '1') then
@@ -59,6 +39,7 @@ begin
     
     next_state_func: process(state)
     begin
+    -- implements a FSM to allow multiplexing between 4 digits of the 7 segment display
         case state is
          when instr =>
            next_state <= reg;
@@ -82,24 +63,22 @@ begin
     seg_proc: process(disp_in_4_bit)
     begin
         case disp_in_4_bit is
-            when "0000"   => disp_out <= "1000000";
-            when "0001"   => disp_out <= "1111001";
-            when "0010"   => disp_out <= "0100100";
-            when "0011"   => disp_out <= "0110000";
-            when "0100"   => disp_out <= "0011001";
-            when "0101"   => disp_out <= "0010010";
-            when "0110"   => disp_out <= "0000010";
-            when "0111"   => disp_out <= "1111000";
-            when "1000"   => disp_out <= "0000000";
-            when "1001"   => disp_out <= "0010000";
-            when "1010"   => disp_out <= "0001000";
-            when "1011"   => disp_out <= "0000011";
-            when "1100"   => disp_out <= "1000110";
-            when "1101"   => disp_out <= "0100001";
-            when "1110"   => disp_out <= "0000110";
-            when others   => disp_out <= "0001110";
+            when "0000"   => disp_out <= "1000000"; -- 0
+            when "0001"   => disp_out <= "1111001"; -- 1
+            when "0010"   => disp_out <= "0100100"; -- 2
+            when "0011"   => disp_out <= "0110000"; -- 3
+            when "0100"   => disp_out <= "0011001"; -- 4
+            when "0101"   => disp_out <= "0010010"; -- 5
+            when "0110"   => disp_out <= "0000010"; -- 6
+            when "0111"   => disp_out <= "1111000"; -- 7
+            when "1000"   => disp_out <= "0000000"; -- 8
+            when "1001"   => disp_out <= "0010000"; -- 9
+            when "1010"   => disp_out <= "0001000"; -- A
+            when "1011"   => disp_out <= "0000011"; -- b
+            when "1100"   => disp_out <= "1000110"; -- C
+            when "1101"   => disp_out <= "0100001"; -- d
+            when "1110"   => disp_out <= "0000110"; -- E
+            when others   => disp_out <= "0001110"; -- F
         end case;
     end process seg_proc;
-
-
 end Behavioral;

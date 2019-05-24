@@ -1,21 +1,13 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Group 20
 -- Create Date: 20.03.2019 12:35:54
--- Design Name: 
 -- Module Name: ALU - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Description: ALU for logic and unsigned integer operations
+-- Supports logic operations from opcodes:
+-- 0000 -> AND
+-- 0001 -> OR
+-- 0010 -> Addition
+-- 0011 -> Subtraction
 ----------------------------------------------------------------------------------
 
 
@@ -24,15 +16,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- take two operands, A and B, and perform logic operation specified by OP
 entity ALU is
     Port ( OP : in STD_LOGIC_VECTOR (3 downto 0);
            A : in STD_LOGIC_VECTOR (7 downto 0);
@@ -40,8 +24,8 @@ entity ALU is
            result : out STD_LOGIC_VECTOR (7 downto 0));
 end ALU;
 
-architecture Behavioral of ALU is
 
+architecture Behavioral of ALU is
 begin
     acc : process (OP, A, B) is
     begin
@@ -54,6 +38,4 @@ begin
        when others => result <= A - B;
      end case;
     end process acc;
-
-
 end Behavioral;

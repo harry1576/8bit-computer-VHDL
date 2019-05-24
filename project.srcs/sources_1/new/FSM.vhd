@@ -1,35 +1,13 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Group 20
 -- Create Date: 20.03.2019 13:10:56
--- Design Name: 
 -- Module Name: FSM - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
+-- Description: Finite state machine for controlling all timing and operations
 ----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity FSM is
     Port ( input : in STD_LOGIC_VECTOR (15 downto 8);
@@ -38,13 +16,13 @@ entity FSM is
            Clk : in STD_LOGIC;
            btn_reset : out STD_LOGIC;
            
-           enable_regs : out STD_LOGIC_VECTOR (3 downto 0);
-           enable_regs_tri : out STD_LOGIC_VECTOR (3 downto 0);
+           en_regs : out STD_LOGIC_VECTOR (3 downto 0);
+           en_regs_tri : out STD_LOGIC_VECTOR (3 downto 0);
            
-           enable_op_A : out STD_LOGIC;
-           enable_reg_G : out STD_LOGIC;
-           enable_tri_G : out STD_LOGIC;
-           enable_tri_EXT : out STD_LOGIC);
+           en_op_A : out STD_LOGIC;
+           en_reg_G : out STD_LOGIC;
+           en_tri_G : out STD_LOGIC;
+           en_tri_EXT : out STD_LOGIC);
 end FSM;
 
 architecture Behavioral of FSM is
@@ -70,6 +48,7 @@ begin
         when idle =>
             if (execute = '1') then
                 case input(15 downto 12) is
+                    -- seperate states depending on opcode (switches 15 down to 12)
                     when "1000" => next_state <= load_reg;      --load data from register to reg G
                     when "1001" => next_state <= load_data;     --load data from input to reg G
                     when "1010" => next_state <= out_to_reg;    --write G into register
@@ -91,88 +70,83 @@ begin
     datapath_func : process (state)
     begin
     case state is
-        when idle =>
+    -- enable or disable registers based on which operation is currently running
+        when idle =>                    --waiting state, disable all inputs/outputs
             btn_reset <= '0';
-            
-        
-            enable_regs_tri <= "0000";
-            enable_regs <= "0000";
-            
-            enable_op_A <= '0';
-            enable_reg_G <= '0';
-            enable_tri_G <= '0';
-            enable_tri_EXT <= '0';
+            en_regs_tri <= "0000";
+            en_regs <= "0000";
+            en_op_A <= '0';
+            en_reg_G <= '0';
+            en_tri_G <= '0';
+            en_tri_EXT <= '0';
         when load_reg =>                --load data from register to reg G
             btn_reset <= '1';
-            enable_regs <= "0000";
+            en_regs <= "0000";
             case input(11 downto 10) is --enable register outputs
-                when "00" => enable_regs_tri <= "0001";
-                when "01" => enable_regs_tri <= "0010";
-                when "10" => enable_regs_tri <= "0100";
-                when others => enable_regs_tri <= "1000";
+                when "00" => en_regs_tri <= "0001";
+                when "01" => en_regs_tri <= "0010";
+                when "10" => en_regs_tri <= "0100";
+                when others => en_regs_tri <= "1000";
             end case;
-            enable_op_A <= '0';
-            enable_reg_G <= '1';
-            enable_tri_G <= '0';
-            enable_tri_EXT <= '0';
+            en_op_A <= '0';
+            en_reg_G <= '1';
+            en_tri_G <= '0';
+            en_tri_EXT <= '0';
         when load_data =>               --load data from input to reg G
             btn_reset <= '1';
-            enable_regs <= "0000";
-            enable_regs_tri <= "0000";
-            enable_op_A <= '0';
-            enable_reg_G <= '1';
-            enable_tri_G <= '0';
-            enable_tri_EXT <= '1';
+            en_regs <= "0000";
+            en_regs_tri <= "0000";
+            en_op_A <= '0';
+            en_reg_G <= '1';
+            en_tri_G <= '0';
+            en_tri_EXT <= '1';
         when out_to_reg =>              --write G into register
             btn_reset <= '1';
             case input(11 downto 10) is --enable register inputs
-                when "00" => enable_regs <= "0001";
-                when "01" => enable_regs <= "0010";
-                when "10" => enable_regs <= "0100";
-                when others => enable_regs <= "1000";
+                when "00" => en_regs <= "0001";
+                when "01" => en_regs <= "0010";
+                when "10" => en_regs <= "0100";
+                when others => en_regs <= "1000";
             end case;
-            enable_regs_tri <= "0000";
-            enable_op_A <= '0';
-            enable_reg_G <= '0';
-            enable_tri_G <= '1';
-            enable_tri_EXT <= '0';
+            en_regs_tri <= "0000";
+            en_op_A <= '0';
+            en_reg_G <= '0';
+            en_tri_G <= '1';
+            en_tri_EXT <= '0';
         when data_to_reg =>             --write data from input into register
             btn_reset <= '1';
             case input(11 downto 10) is --enable register inputs
-                when "00" => enable_regs <= "0001";
-                when "01" => enable_regs <= "0010";
-                when "10" => enable_regs <= "0100";
-                when others => enable_regs <= "1000";
+                when "00" => en_regs <= "0001";
+                when "01" => en_regs <= "0010";
+                when "10" => en_regs <= "0100";
+                when others => en_regs <= "1000";
             end case;
-            enable_regs_tri <= "0000";            
-            enable_op_A <= '0';
-            enable_reg_G <= '0';
-            enable_tri_G <= '0';
-            enable_tri_EXT <= '1';
-        when ALU_op_1 =>                --ALU operation with reg G and another register
+            en_regs_tri <= "0000";            
+            en_op_A <= '0';
+            en_reg_G <= '0';
+            en_tri_G <= '0';
+            en_tri_EXT <= '1';
+        when ALU_op_1 =>                --ALU operation with reg G and another register B
             btn_reset <= '1';
-            enable_regs <= "0000";
-            enable_regs_tri <= "0000";
-            enable_op_A <= '1';
-            enable_reg_G <= '0';
-            enable_tri_G <= '1';
-            enable_tri_EXT <= '0';
+            en_regs <= "0000";
+            en_regs_tri <= "0000";
+            en_op_A <= '1';
+            en_reg_G <= '0';
+            en_tri_G <= '1';
+            en_tri_EXT <= '0';
         when ALU_op_2 =>
             btn_reset <= '0';
-            enable_regs <= "0000";
+            en_regs <= "0000";
             case input(11 downto 10) is --enable register outputs
-                when "00" => enable_regs_tri <= "0001";
-                when "01" => enable_regs_tri <= "0010";
-                when "10" => enable_regs_tri <= "0100";
-                when others => enable_regs_tri <= "1000";
+                when "00" => en_regs_tri <= "0001";
+                when "01" => en_regs_tri <= "0010";
+                when "10" => en_regs_tri <= "0100";
+                when others => en_regs_tri <= "1000";
             end case;
-            enable_op_A <= '0';
-            enable_reg_G <= '1';
-            enable_tri_G <= '0';
-            enable_tri_EXT <= '0';
+            en_op_A <= '0';
+            en_reg_G <= '1';
+            en_tri_G <= '0';
+            en_tri_EXT <= '0';
     end case;
     end process datapath_func;
-    
-
-
 end Behavioral;

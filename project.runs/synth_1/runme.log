@@ -18,58 +18,58 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13948 
+INFO: Helper process launched with PID 12988 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 277.719 ; gain = 71.098
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 278.293 ; gain = 71.094
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'main' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:48]
-INFO: [Synth 8-3491] module 'debounce' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:34' bound to instance 'button_debounce' of component 'debounce' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:172]
-INFO: [Synth 8-638] synthesizing module 'debounce' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:41]
-INFO: [Synth 8-3491] module 'btn_reg' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:34' bound to instance 'button_toggle' of component 'btn_reg' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:173]
-INFO: [Synth 8-638] synthesizing module 'btn_reg' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'btn_reg' (2#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:40]
-INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg0' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:176]
-INFO: [Synth 8-638] synthesizing module 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'reg_8' (3#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:41]
-INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg0_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:177]
-INFO: [Synth 8-638] synthesizing module 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'tri_8' (4#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:40]
-INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg1' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:179]
-INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg1_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:180]
-INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg2' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:182]
-INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg2_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:183]
-INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg3' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:185]
-INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'reg3_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:186]
-INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'op_A' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:189]
-INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:34' bound to instance 'reg_G' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:191]
-INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'tri_G' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:192]
-INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:34' bound to instance 'tri_EXT' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:194]
-INFO: [Synth 8-3491] module 'clock_divider' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:21' bound to instance 'clock_div' of component 'clock_divider' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'main' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:27]
+INFO: [Synth 8-3491] module 'debounce' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:12' bound to instance 'button_debounce' of component 'debounce' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'debounce' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/debounce.vhd:19]
+INFO: [Synth 8-3491] module 'btn_reg' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:12' bound to instance 'button_toggle' of component 'btn_reg' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'btn_reg' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'btn_reg' (2#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/btn_reg.vhd:18]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:12' bound to instance 'reg0' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'reg_8' (3#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:19]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:12' bound to instance 'reg0_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'tri_8' (4#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:18]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:12' bound to instance 'reg1' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:163]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:12' bound to instance 'reg1_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:164]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:12' bound to instance 'reg2' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:166]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:12' bound to instance 'reg2_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:167]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:12' bound to instance 'reg3' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:169]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:12' bound to instance 'reg3_tri' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:170]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:12' bound to instance 'op_A' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:173]
+INFO: [Synth 8-3491] module 'reg_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/reg_8.vhd:12' bound to instance 'reg_G' of component 'reg_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:175]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:12' bound to instance 'tri_G' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:176]
+INFO: [Synth 8-3491] module 'tri_8' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/tri_8.vhd:12' bound to instance 'tri_EXT' of component 'tri_8' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:178]
+INFO: [Synth 8-3491] module 'clock_divider' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:21' bound to instance 'clock_div' of component 'clock_divider' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:180]
 INFO: [Synth 8-638] synthesizing module 'clock_divider' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:54]
 	Parameter INPUT_FREQUENCY bound to: 50000000 - type: integer 
-	Parameter OUTPUT_FREQUENCY bound to: 50000000 - type: integer 
+	Parameter OUTPUT_FREQUENCY bound to: 200 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'clock_divider' (5#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:54]
-INFO: [Synth 8-3491] module 'ALU' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:36' bound to instance 'main_ALU' of component 'ALU' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:197]
-INFO: [Synth 8-638] synthesizing module 'ALU' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:43]
-INFO: [Synth 8-3491] module 'FSM' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:34' bound to instance 'main_FSM' of component 'FSM' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:199]
-INFO: [Synth 8-638] synthesizing module 'FSM' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:50]
-WARNING: [Synth 8-614] signal 'input' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:66]
-WARNING: [Synth 8-614] signal 'input' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'FSM' (7#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:50]
-INFO: [Synth 8-3491] module 'display' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:34' bound to instance 'seven_seg' of component 'display' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:203]
-INFO: [Synth 8-638] synthesizing module 'display' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:43]
-WARNING: [Synth 8-614] signal 'instr_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:60]
-WARNING: [Synth 8-614] signal 'reg_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:60]
-WARNING: [Synth 8-614] signal 'disp_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:60]
-INFO: [Synth 8-256] done synthesizing module 'display' (8#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:43]
-WARNING: [Synth 8-3848] Net debounce_clr in module/entity main does not have driver. [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:130]
-INFO: [Synth 8-256] done synthesizing module 'main' (9#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:48]
+INFO: [Synth 8-3491] module 'ALU' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:20' bound to instance 'main_ALU' of component 'ALU' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'ALU' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:28]
+INFO: [Synth 8-3491] module 'FSM' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:12' bound to instance 'main_FSM' of component 'FSM' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'FSM' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:28]
+WARNING: [Synth 8-614] signal 'input' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:44]
+WARNING: [Synth 8-614] signal 'input' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (7#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/FSM.vhd:28]
+INFO: [Synth 8-3491] module 'display' declared at 'P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:15' bound to instance 'seven_seg' of component 'display' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'display' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:24]
+WARNING: [Synth 8-614] signal 'instr_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:40]
+WARNING: [Synth 8-614] signal 'reg_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:40]
+WARNING: [Synth 8-614] signal 'disp_in' is read in the process but is not in the sensitivity list [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'display' (8#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/display.vhd:24]
+WARNING: [Synth 8-3848] Net debounce_clr in module/entity main does not have driver. [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:114]
+INFO: [Synth 8-256] done synthesizing module 'main' (9#1) [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:27]
 WARNING: [Synth 8-3331] design FSM has unconnected port input[9]
 WARNING: [Synth 8-3331] design FSM has unconnected port input[8]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 315.152 ; gain = 108.531
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 314.723 ; gain = 107.523
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -78,9 +78,9 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin button_debounce:clr to constant 0 [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:172]
+WARNING: [Synth 8-3295] tying undriven pin button_debounce:clr to constant 0 [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/main.vhd:156]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 315.152 ; gain = 108.531
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 314.723 ; gain = 107.523
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -88,54 +88,6 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:44]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:47]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc:48]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/ENEL373/Lab_A01_group_20/project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -144,26 +96,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 618.438 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 618.770 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'count_reg[0:0]' into 'out_clock_reg' [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/imports/Downloads/clock_divider.vhd:87]
-INFO: [Synth 8-5544] ROM "out_clock" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:48]
+INFO: [Synth 8-5546] ROM "out_clock" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [P:/ENEL373/Lab_A01_group_20/project.srcs/sources_1/new/ALU.vhd:32]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSM'
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
@@ -179,7 +130,7 @@ INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because addre
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'FSM'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -192,12 +143,15 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     18 Bit       Adders := 1     
 	   3 Input      8 Bit       Adders := 1     
 +---Registers : 
+	               18 Bit    Registers := 1     
 	                8 Bit    Registers := 6     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 4     
 +---Muxes : 
+	   3 Input     18 Bit        Muxes := 1     
 	   6 Input      8 Bit        Muxes := 2     
 	   4 Input      8 Bit        Muxes := 2     
 	  16 Input      7 Bit        Muxes := 1     
@@ -206,6 +160,7 @@ Detailed RTL Component Info :
 	  13 Input      3 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
@@ -225,9 +180,14 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 1     
 Module clock_divider 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
 +---Registers : 
+	               18 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
+	   3 Input     18 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module ALU 
 Detailed RTL Component Info : 
@@ -265,10 +225,12 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 618.438 ; gain = 411.816
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "out_clock0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clock_div/out_clock" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design main has port AN[6] driven by constant 1
 WARNING: [Synth 8-3917] design main has port AN[5] driven by constant 1
 WARNING: [Synth 8-3917] design main has port AN[3] driven by constant 1
@@ -276,9 +238,9 @@ WARNING: [Synth 8-3917] design main has port AN[2] driven by constant 1
 WARNING: [Synth 8-3331] design main has unconnected port SW[9]
 WARNING: [Synth 8-3331] design main has unconnected port SW[8]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 618.770 ; gain = 411.570
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -289,9 +251,9 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 618.770 ; gain = 411.570
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -305,10 +267,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -320,16 +282,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -346,7 +308,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -359,7 +321,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -371,25 +333,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -406,15 +368,15 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |     2|
-|3     |LUT1   |     3|
+|2     |CARRY4 |     7|
+|3     |LUT1   |    20|
 |4     |LUT2   |    23|
-|5     |LUT3   |     6|
-|6     |LUT4   |    10|
-|7     |LUT5   |    18|
-|8     |LUT6   |    37|
+|5     |LUT3   |     7|
+|6     |LUT4   |    13|
+|7     |LUT5   |    22|
+|8     |LUT6   |    40|
 |9     |FDCE   |     1|
-|10    |FDRE   |    57|
+|10    |FDRE   |    75|
 |11    |IBUF   |    16|
 |12    |OBUF   |    15|
 +------+-------+------+
@@ -423,11 +385,11 @@ Report Instance Areas:
 +------+------------------+--------------+------+
 |      |Instance          |Module        |Cells |
 +------+------------------+--------------+------+
-|1     |top               |              |   190|
+|1     |top               |              |   241|
 |2     |  main_ALU        |ALU           |     8|
 |3     |  button_debounce |debounce      |     4|
 |4     |  button_toggle   |btn_reg       |     2|
-|5     |  clock_div       |clock_divider |     2|
+|5     |  clock_div       |clock_divider |    53|
 |6     |  main_FSM        |FSM           |    70|
 |7     |  op_A            |reg_8         |    10|
 |8     |  reg0            |reg_8_0       |     8|
@@ -438,13 +400,13 @@ Report Instance Areas:
 |13    |  seven_seg       |display       |     8|
 +------+------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 618.438 ; gain = 108.531
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 618.438 ; gain = 411.816
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 618.770 ; gain = 107.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 618.770 ; gain = 411.570
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
@@ -452,8 +414,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-54 Infos, 35 Warnings, 16 Critical Warnings and 0 Errors encountered.
+55 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 618.438 ; gain = 411.816
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 618.438 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed May 01 14:23:25 2019...
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 618.770 ; gain = 411.570
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 618.770 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 24 15:09:28 2019...
